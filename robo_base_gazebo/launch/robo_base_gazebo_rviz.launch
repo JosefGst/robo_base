@@ -1,0 +1,9 @@
+<launch>
+  <arg name="model" default="robot_event_cam"/>
+
+  <include file="$(find robo_base_bringup)/launch/robo_base_remote.launch">
+    <arg name="model" value="$(arg model)"/>
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robo_base_gazebo)/rviz/robo_base_gazebo_model.rviz"/>
+</launch>
