@@ -14,8 +14,26 @@
     <rosparam file="$(find robo_base_navigation)/param/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find robo_base_navigation)/param/move_base_params.yaml" command="load" />
     <rosparam file="$(find robo_base_navigation)/param/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find robo_base_navigation)/param/eband_local_planner.yaml" command="load" />
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
     <remap from="odom" to="$(arg odom_topic)"/>
     <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)" />
   </node>
+
+
+  
+  <!-- Parameters -->
+  <!-- <rosparam file="$(find ghost)/param/move_base.yaml" ns="move_base" />
+  <rosparam file="$(find ghost)/param/global_costmap_noslam.yaml" ns="move_base" />
+  <rosparam file="$(find ghost)/param/local_costmap_noslam.yaml" ns="move_base" />
+  <rosparam file="$(find ghost)/param/global_planner.yaml" ns="move_base" />
+  <rosparam file="$(find ghost)/param/eband_local_planner.yaml" ns="move_base" />
+  <rosparam file="$(find ghost)/param/dwa_local_planner.yaml" ns="move_base" /> -->
+
+  <!-- Movebase -->
+  <!-- <node pkg="move_base" type="move_base" name="move_base" respawn="false" output="$(arg output)"> -->
+  <!-- <node pkg="move_base" type="move_base" name="move_base" respawn="false" output="screen">
+  </node> -->
+  
+
 </launch>
