@@ -1,0 +1,6 @@
+<launch>
+  
+  <node pkg="vel_cmd_timeout" type="vel_cmd_timeout.py" name="vel_cmd_timeout" output="screen" />
+
+</launch>
+
