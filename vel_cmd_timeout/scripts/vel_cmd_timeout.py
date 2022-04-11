@@ -5,8 +5,8 @@ from geometry_msgs.msg import Twist
 from ackermann_msgs.msg import AckermannDriveStamped
 
 class SendEmptyWatchdog(object):
-    def __init__(self, datatype, topic, timeout=1, send_value=None):
-        self.timeout = timeout
+    def __init__(self, datatype, topic, send_value=None):
+        self.timeout = rospy.get_param('~timeout', '1.0')
         self.datatype = datatype
 
         if send_value is None:
