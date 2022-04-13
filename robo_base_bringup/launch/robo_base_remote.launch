@@ -7,7 +7,7 @@
   </include>
 
   <!-- vel_cmd_timout -->
-  <include file="$(find vel_cmd_timeout)/launch/vel_cmd_timeout.launch" />
+  <!-- <include file="$(find vel_cmd_timeout)/launch/vel_cmd_timeout.launch" /> -->
 
 
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
