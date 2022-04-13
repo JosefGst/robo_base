@@ -11,8 +11,8 @@
     <rosparam file="$(find robo_base_navigation)/param/jackal/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find robo_base_navigation)/param/jackal/costmap_common_params.yaml" command="load" ns="local_costmap" />
 
-    <rosparam file="$(find robo_base_navigation)/param/jackal/odom_nav_params/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find robo_base_navigation)/param/jackal/odom_nav_params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robo_base_navigation)/param/jackal/map_nav_params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robo_base_navigation)/param/jackal/map_nav_params/local_costmap_params.yaml" command="load" />
 
     <rosparam file="$(find robo_base_navigation)/param/jackal/base_local_planner_params.yaml" command="load" />
     <rosparam file="$(find robo_base_navigation)/param/jackal/move_base_params.yaml" command="load" />
