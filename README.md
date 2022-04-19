@@ -1,5 +1,10 @@
 # robo_base
 
+## Required Packages
+`sudo apt-get install ros-melodic-teb-local-planner`
+`sudo apt-get install ros-melodic-eband-local-planner`
+`sudo apt-get install ros-melodic-move-base-sequence`
+
 ## Simulation
 
 **robo_base** is a mecanum wheel robot devoeloped on ROS melodic.  
@@ -39,11 +44,11 @@ the map and the world need to match, you can change the map with ,map_file:=$HOM
 
 ## move to navigation goal
 move to a single goal which is hardcoded in the simple_navigation_goals.py file.   
-`roscd simple_robot_move2goal/scripts/`  
+`roscd simple_navigation_goals/scripts/`  
 `python simple_navigation_goals.py`  
   
 move to several locations sequantually, specified in the launch file as "p_seq">[x,y,z,...]
-`roslaunch simple_robot_move2goal movebase_seq.launch`
+`roslaunch simple_navigation_goals movebase_seq.launch`
 
 ## Resources
 - [Gazebo/Fusion to navigation Youtube tutorial](https://www.youtube.com/watch?v=o7w7yv-Nros&list=PLFnCFnTZNyU8-omA_VFztWfeFn2gCyY4_)
