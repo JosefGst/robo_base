@@ -1,7 +1,7 @@
 <launch>
-  
+  <arg name="timeout" /> 
   <node pkg="vel_cmd_timeout" type="vel_cmd_timeout.py" name="vel_cmd_timeout" output="screen" >
-    <param name="timeout" type="double" value="1.0" />
+    <param name="timeout" type="double" value="$(arg timeout)" />
   </node>
 
 </launch>
