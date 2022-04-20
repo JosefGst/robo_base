@@ -84,6 +84,8 @@ Visualization Manager:
           Value: true
         agv_lidar:
           Value: true
+        agv_lidar2:
+          Value: true
         base_footprint:
           Value: true
         map:
@@ -117,6 +119,8 @@ Visualization Manager:
                 wheel_front_right_link:
                   {}
               agv_lidar:
+                {}
+              agv_lidar2:
                 {}
       Update Interval: 0
       Value: true
