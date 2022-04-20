@@ -1,11 +1,11 @@
 # robo_base
 
 ## Required Packages
-`sudo apt-get install ros-melodic-teb-local-planner`
-`sudo apt-get install ros-melodic-eband-local-planner`
-`sudo apt-get install ros-melodic-move-base-sequence`
-`sudo apt-get install ros-melodic-cartographer-ros`
-`sudo apt-get install ros-melodic-cartographer-rviz`
+`sudo apt-get install ros-melodic-teb-local-planner`  
+`sudo apt-get install ros-melodic-eband-local-planner`  
+`sudo apt-get install ros-melodic-move-base-sequence`   
+`sudo apt-get install ros-melodic-cartographer-ros`  
+`sudo apt-get install ros-melodic-cartographer-rviz`  
 
 ## Simulation
 
