@@ -6,6 +6,8 @@
 `sudo apt-get install ros-melodic-move-base-sequence`   
 `sudo apt-get install ros-melodic-cartographer-ros`  
 `sudo apt-get install ros-melodic-cartographer-rviz`  
+`sudo apt-get install ros-melodic-ira-laser-tools`  
+
 
 ## Simulation
 
@@ -18,7 +20,9 @@ Current sensors used are:
 - [Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/)
 ## Launch Simulation World
 starts the simulation in Gazebo  
-`roslaunch robo_base_gazebo robo_base_office.launch`   
+`roslaunch robo_base_gazebo robo_base_house.launch`   
+or for the robot with 2 laser scanner    
+`roslaunch robo_base_gazebo robo_base_house.launch model:=robot_2lidar`
 use  
 `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`  
 to controll the robot manually with "ijkl,"  
@@ -39,12 +43,14 @@ cd into folder where you want to save the map
 ## Navigation
 close the SLAM node.  
 the map and the world need to match, you can change the map with ,map_file:=$HOME/maps/map.yaml. With the path to the yaml file.  
-`roslaunch robo_base_navigation robo_base_navigation.launch map_file:=$HOME/maps/map.yaml` 
-
+`roslaunch robo_base_navigation robo_base_navigation.launch map_file:=$HOME/maps/map.yaml`  
+or  
+`roslaunch robo_base_navigation robo_base_navigation.launch planner:=move_base_eband model:=robot_2lidar`  
 
 
 
 ## move to navigation goal
+`roslaunch simple_navigation_goals move_base_seq.launch`   
 move to a single goal which is hardcoded in the simple_navigation_goals.py file.   
 `roscd simple_navigation_goals/scripts/`  
 `python simple_navigation_goals.py`  

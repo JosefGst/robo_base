@@ -4,13 +4,6 @@
 
   <arg name="multi_robot_name" default=""/>
 
-  <!-- <include file="$(find ghost)/launch/boot.launch">
-    <arg name="config" value="$(arg config)"/>
-    <arg name="sim" value="false"/>
-    <arg name="tf" value="true"/>
-  
-    <arg name="robot" value="$(arg robot)"/>
-  </include> -->
 
   <!-- vel_cmd_timout -->
   <include file="$(find vel_cmd_timeout)/launch/vel_cmd_timeout.launch" >

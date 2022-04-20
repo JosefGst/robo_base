@@ -103,12 +103,12 @@
   </link>
   
   <!-- AGV lidar -->
-  <joint name="base_footprint_lidar_joint" type="fixed">
+  <joint name="base_footprint_lidar1_joint" type="fixed">
 	  <origin xyz="${agv_base_length/4} 0.0 ${agv_base_height + box_size}" rpy="0 0 0" />
     <parent link="base_footprint"/>
-    <child link="agv_lidar" />
+    <child link="agv_lidar1" />
   </joint>
-  <link name="agv_lidar">
+  <link name="agv_lidar1">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -118,10 +118,10 @@
     </visual>
   </link>
 
-  <gazebo reference="agv_lidar">
+  <gazebo reference="agv_lidar1">
     <material>Gazebo/Blue</material>
     <turnGravityOff>false</turnGravityOff>
-    <sensor type="ray" name="agv_lidar">
+    <sensor type="ray" name="agv_lidar1">
       <pose>${box_size/2} 0 0 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>10</update_rate>
@@ -141,8 +141,8 @@
         </range>
       </ray>
       <plugin name="gazebo_ros_agv_lidar_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/scan</topicName>
-        <frameName>agv_lidar</frameName>
+        <topicName>/scan1</topicName>
+        <frameName>agv_lidar1</frameName>
       </plugin>
     </sensor>
   </gazebo>
