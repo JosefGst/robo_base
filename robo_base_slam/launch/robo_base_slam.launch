@@ -2,7 +2,7 @@
   <!-- Arguments -->
   <arg name="model" default="robo_base"/>
   <arg name="slam_methods" default="gmapping" doc="slam type [gmapping, cartographer, hector, karto, frontier_exploration, explore]"/>
-  <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
+  <arg name="configuration_basename" default="robo_base_conf.lua"/>
   <arg name="open_rviz" default="true"/>
 
   <!-- robo_base -->

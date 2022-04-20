@@ -14,7 +14,7 @@
 <launch>
   <!-- Arguments -->
   <arg name="model" default="robo_base"/>
-  <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
+  <arg name="configuration_basename" default="robo_base_conf.lua"/>
 
   <!-- move_base -->
   <include file="$(find robo_base_navigation)/launch/move_base_eband.launch">
