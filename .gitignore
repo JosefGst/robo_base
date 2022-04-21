@@ -53,3 +53,7 @@ CATKIN_IGNORE
 
 # vscode
 .vscode/
+
+/robo_base_navigation
+/robo_base_slam
+/simple_navigation_goals
