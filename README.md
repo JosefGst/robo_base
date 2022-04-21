@@ -1,6 +1,14 @@
 # robo_base
 
 ## Required Packages
+-robo_base_bringup
+-robo_base_description
+-robo_base_gazebo
+-robo_base_navigation
+-robo_base_slam
+-simple_navigation_goals
+-vel_cmd_timeout
+
 `sudo apt-get install ros-melodic-teb-local-planner`  
 `sudo apt-get install ros-melodic-eband-local-planner`  
 `sudo apt-get install ros-melodic-move-base-sequence`   
