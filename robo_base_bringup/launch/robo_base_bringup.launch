@@ -10,6 +10,8 @@
     <arg name="timeout" value=".6"/>
   </include> -->
 
+  <!-- for vertical lift demo -->
+  <node pkg="generate_tf" type="tf_listener" name="tf_listener"/>
   <!-- Drive -->
   <include file="$(find drive)/launch/slam.launch"/>
   <!-- Velodyne lidar -->
