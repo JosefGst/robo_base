@@ -163,9 +163,17 @@
     </visual>
   </link>
 
+  <joint name="cam_frame_id_joint" type="fixed">
+	  <origin xyz="0 0.0 0" rpy="${-M_PI_2} 0 ${-M_PI_2}" />
+    <parent link="depth_cam"/>
+    <child link="cam_frame_id" />
+  </joint>
+  <link name="cam_frame_id"/>
+
+
   <xacro:property name="link_name" value="depth_cam" />
   <xacro:property name="camera_name" value="realsense" />
-  <xacro:property name="frame_name" value="depth_cam" />
+  <xacro:property name="frame_name" value="cam_frame_id" />
   <gazebo reference="${link_name}">
     <material>Gazebo/Blue</material>
     <sensor name="${link_name}_camera" type="depth">
