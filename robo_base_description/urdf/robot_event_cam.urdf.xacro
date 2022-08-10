@@ -177,7 +177,7 @@
       <ray>
         <scan>
           <horizontal>
-            <samples>721</samples>
+            <samples>360</samples>
             <resolution>1</resolution>
             <min_angle>-${M_PI}</min_angle>
             <max_angle>${M_PI}</max_angle>
@@ -186,7 +186,7 @@
         <range>
           <min>0.10</min>
           <max>20.0</max>
-          <resolution>0.001</resolution>
+          <resolution>0.01</resolution>
         </range>
       </ray>
       <plugin name="gazebo_ros_agv_lidar_controller" filename="libgazebo_ros_laser.so">
@@ -297,7 +297,7 @@
   </gazebo>
 
   <!-- Veldoyne Lidar  -->
-  <xacro:arg name="gpu" default="false"/>
+  <xacro:arg name="gpu" default="true"/>
   <xacro:property name="gpu" value="$(arg gpu)" />
   <xacro:arg name="organize_cloud" default="false"/>
   <xacro:property name="organize_cloud" value="$(arg organize_cloud)" />
