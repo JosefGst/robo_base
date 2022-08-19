@@ -63,9 +63,8 @@
     </joint>
 
     
-    
     <!-- Hokuyo Laser -->
-    <xacro:hokuyo name="hokuyo" xyz=".25 0 .25" rpy="${pi} 0 0" parent="base_link" topic="scan"/>
+    <xacro:hokuyo name="base_scan" xyz=".25 0 .25" rpy="${pi} 0 0" parent="base_link" topic="scan" frame_id="base_scan"/>
 
 
 
