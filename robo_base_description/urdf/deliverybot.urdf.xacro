@@ -64,7 +64,7 @@
 
     
     <!-- Hokuyo Laser -->
-    <xacro:hokuyo name="base_scan" xyz=".25 0 .25" rpy="${pi} 0 0" parent="base_link" min="${-pi/2}" max="${pi/2}"/>
+    <xacro:hokuyo name="base_scan" xyz=".25 0 .25" rpy="${pi} 0 0" parent="base_link" min_a="${-pi/2}" max_a="${pi/2}"/>
 
 
 

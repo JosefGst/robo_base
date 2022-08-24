@@ -6,6 +6,12 @@
     <include file="$(find robo_base_bringup)/launch/merge_laser.launch"/>
   </group>
 
+  <group if="$(eval arg('model') == 'tko_robot')">
+    <include file="$(find robo_base_bringup)/launch/merge_laser_tko.launch"/>
+  </group>
+
+
+
   <include file="$(find robo_base_bringup)/launch/includes/description.launch.xml">
     <arg name="model" value="$(arg model)" />
   </include>
