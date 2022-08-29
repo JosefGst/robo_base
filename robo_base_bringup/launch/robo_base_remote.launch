@@ -1,5 +1,5 @@
 <launch>
-  <arg name="model" default="robot_event_cam"/>
+  <arg name="model" default="tko_robot"/>
   <arg name="multi_robot_name" default=""/>
 
   <group if="$(eval arg('model') == 'robot_2lidar')">
