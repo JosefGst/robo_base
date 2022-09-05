@@ -63,10 +63,10 @@
     <xacro:hokuyo name="scan_back" xyz="-1.017 0 0" rpy="${pi} 0 ${pi}" parent="base_link" min_a="${-pi/2}" max_a="${pi/2}"/>
 
     <!-- Hokuyo Laser Left-->
-    <xacro:hokuyo name="scan_left" xyz=".14 0.39 .077" rpy="0 0 0" parent="base_link" min_a="${-pi/2}" max_a="${pi}"/>
+    <xacro:hokuyo name="scan_left" xyz=".14 0.42 .077" rpy="0 0 0" parent="base_link" min_a="${-pi/2}" max_a="${pi}"/>
 
     <!-- Hokuyo Laser Right-->
-    <xacro:hokuyo name="scan_right" xyz=".14 -0.39 .162" rpy="0 0 0" parent="base_link" min_a="${-pi}" max_a="${pi/2}"/>
+    <xacro:hokuyo name="scan_right" xyz=".14 -0.42 .162" rpy="0 0 0" parent="base_link" min_a="${-pi}" max_a="${pi/2}"/>
 
 
     <!-- Veldoyne Lidar  -->
