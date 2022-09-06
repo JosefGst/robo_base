@@ -7,7 +7,7 @@
   </group>
 
   <group if="$(eval arg('model') == 'tko_robot')">
-    <include file="$(find robo_base_bringup)/launch/merge_laser_tko.launch"/>
+    <include file="$(find robo_base_bringup)/launch/merge_laser.launch"/>
   </group>
 
 

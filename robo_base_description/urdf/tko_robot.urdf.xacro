@@ -3,17 +3,11 @@
 
     <!-- basic shapes -->
     <xacro:include filename="$(find urdf_basic_shapes)/urdf/basic_shapes.urdf.xacro"/>
-    <!-- diff_wheel -->
-    <xacro:include filename="$(find urdf_basic_shapes)/urdf/diff_wheel.urdf.xacro"/>
-    <!-- hokuyo -->
-    <xacro:include filename="$(find urdf_basic_shapes)/sensors/hokuyo.urdf.xacro"/>
-    <!-- velodyne -->
-    <xacro:include filename="$(find urdf_basic_shapes)/sensors/velodyne.urdf.xacro"/>
-    
+
 
     <link name="base_footprint"/>
 
-    <!--cubeic base_link -->
+    <!--cubic base_link -->
     <xacro:cube name="base_link" x=".325" y=".78" z="1.226" ori="-.0975 0 .613" rpy="0 0 0" rgb="Blue" m="10" friction="${standard_friction}"/>
     <joint name="base_joint" type="fixed">
         <parent link="base_footprint"/>
@@ -47,7 +41,8 @@
 
     <!-- diff drive -->
     <!-- the parent link should be the center of wheel axis -->
-    <xacro:diff_wheel wheeldiam="0.14" h=".035" wheel_separation=".78" parent="base_link" friction="200" rgb="Black"/>
+    <xacro:include filename="$(find urdf_basic_shapes)/urdf/diff_wheel.urdf.xacro"/>
+    <xacro:diff_wheel wheeldiam="0.14" h=".035" wheel_separation=".78" parent="base_link" friction="2000" rgb="Black"/>
 
     <!-- caster wheel back -->
     <xacro:ball name="casterwheel_back" r="0.04" ori="0 0 0" rpy="0 0 0" rgb="Black" m="1" friction="${sliding_friction}"/>
@@ -60,17 +55,20 @@
 
     
     <!-- Hokuyo Laser Back-->
+    <xacro:include filename="$(find urdf_basic_shapes)/sensors/hokuyo.urdf.xacro"/>
     <xacro:hokuyo name="scan_back" xyz="-1.017 0 0" rpy="${pi} 0 ${pi}" parent="base_link" min_a="${-pi/2}" max_a="${pi/2}"/>
-
     <!-- Hokuyo Laser Left-->
-    <xacro:hokuyo name="scan_left" xyz=".14 0.39 .077" rpy="0 0 0" parent="base_link" min_a="${-pi/2}" max_a="${pi}"/>
-
+    <xacro:hokuyo name="scan_left" xyz=".14 0.43 .077" rpy="0 0 0" parent="base_link" min_a="${-pi/2}" max_a="${pi}"/>
     <!-- Hokuyo Laser Right-->
-    <xacro:hokuyo name="scan_right" xyz=".14 -0.39 .162" rpy="0 0 0" parent="base_link" min_a="${-pi}" max_a="${pi/2}"/>
-
+    <xacro:hokuyo name="scan_right" xyz=".14 -0.43 .162" rpy="0 0 0" parent="base_link" min_a="${-pi}" max_a="${pi/2}"/>
 
     <!-- Veldoyne Lidar  -->
+    <xacro:include filename="$(find urdf_basic_shapes)/sensors/velodyne.urdf.xacro"/>
     <xacro:velodyne16 name="velodyne" xyz="0 0 1.392" rpy="0 0 0" parent="base_link"/>
+
+    <!-- imu -->
+    <xacro:include filename="$(find urdf_basic_shapes)/sensors/imu.urdf.xacro"/>
+    <xacro:imu name="imu" xyz="0 0 .5" rpy="0 0 0" parent="base_link"/>
 
 
 </robot>
